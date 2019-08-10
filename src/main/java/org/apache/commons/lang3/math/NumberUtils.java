@@ -1032,20 +1032,16 @@ public class NumberUtils {
      * @throws IllegalArgumentException if <code>array</code> is empty
      * @since 3.4 Changed signature from min(int[]) to min(int...)
      */
-    public static int min(final int... array) {
-        // Validates input
+
+    public static int min(final int... array){
+        //Validates input
         validateArray(array);
-
-        // Finds and returns min
+        
+        //Sorts array
+        Arrays.sort(array);
         int min = array[0];
-        for (int j = 1; j < array.length; j++) {
-            if (array[j] < min) {
-                min = array[j];
-            }
-        }
-
+        
         return min;
-    }
 
     /**
      * <p>Returns the minimum value in an array.</p>
@@ -1094,6 +1090,7 @@ public class NumberUtils {
 
         return min;
     }
+
 
      /**
      * <p>Returns the minimum value in an array.</p>

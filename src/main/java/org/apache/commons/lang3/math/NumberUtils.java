@@ -1451,13 +1451,21 @@ public class NumberUtils {
      * @return  the largest of the values
      */
     public static int max(int a, final int b, final int c) {
+        if(a > b){
+            if(a > c){
+                return a;
+            }
+        }
         if (b > a) {
-            a = b;
+            if(b > c){
+                return b;
+            }
         }
         if (c > a) {
-            a = c;
+            if(c > b){
+                return c
+            }
         }
-        return a;
     }
 
     /**
